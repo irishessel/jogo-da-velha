@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
             status.textContent = currentPlayer === 'X' ? 'Sua Vez' : '';
 
             if (currentPlayer === 'O') {
-                setTimeout(makeMoveAI, 1000);
+                setTimeout(makeMoveAI, 100);
             }
         }
     };
