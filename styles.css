@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+@font-face {
+    font-family: 'Halloween';
+    src: url('font/halloween-funtime-font/HalloweenFuntime-JRj0E.ttf') format('truetype');
+}
 
 body {
-    font-family: 'Nosifer', sans-serif;
+    font-family: 'Halloween', sans-serif;
     text-align: center;
     background-color: #000;
     color: #fff;
@@ -49,12 +52,14 @@ body {
     background-color: #FF4500;
     color: #fff;
     padding: 10px 20px;
-    font-family: 'Nosifer', sans-serif;
+    font-family: 'Halloween', sans-serif;
     font-size: 16px;
     cursor: pointer;
     border: none;
     border-radius: 20px;
     margin-top: 20px;
+    box-shadow: 2px 2px 5px #fff;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 #reset-button:hover {
