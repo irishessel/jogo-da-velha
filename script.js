@@ -4,7 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const resetButton = document.getElementById('reset-button');
     const audioVictory = document.getElementById('victory-sound');
     const audioDefeat = document.getElementById('defeat-sound');
-    const batImage = document.getElementById('bat-image');
+    const audioTie = document.getElementById('tie-sound');
+    const audioShooting = document.getElementById('shooting-sound')
+    const ripImage = document.getElementById('rip-image');
+    const pumpkinImage = document.getElementById('pumpkin-image');
+    const witchImage = document.getElementById('witch-image');
+    const bloodImage = document.getElementById('blood-image');
 
     let currentPlayer = 'X';
     let gameBoard = ['', '', '', '', '', '', '', '', ''];
@@ -107,15 +112,24 @@ document.addEventListener('DOMContentLoaded', () => {
         gameActive = false;
         if (result === 'T') {
             status.textContent = 'Jogo empatado!';
+            witchImage.style.display = 'block';
+            setTimeout(() => {
+                witchImage.style.display = 'none';
+            }, 2000);
+            audioTie.play();
         } else {
             status.textContent = result === 'O' ? 'Você Perdeu!' : 'Você Venceu!';
             if (result === 'O') {
-                batImage.style.display = 'block';
+                ripImage.style.display = 'block';
                 setTimeout(() => {
-                    batImage.style.display = 'none';
-                }, 5000);
+                    ripImage.style.display = 'none';
+                }, 2000);
                 audioDefeat.play();
             } else {
+                pumpkinImage.style.display = 'block';
+                setTimeout(() => {
+                    pumpkinImage.style.display = 'none';
+                }, 2000);
                 audioVictory.play();
             }
         }
@@ -132,19 +146,24 @@ document.addEventListener('DOMContentLoaded', () => {
             cell.addEventListener('click', () => playTurn(index, currentPlayer));
         });
 
-        audioVictory.pause();
-        audioVictory.currentTime = 0;
+        audioShooting.pause();
+        audioShooting.currentTime = 0;
 
         if (currentPlayer === 'O') {
             makeMoveAI();
         }
+
     };
 
     resetButton.addEventListener('click', () => {
         resetGame();
-        audioVictory.pause();
-        audioVictory.currentTime = 0;
+        audioShooting.play();
+        bloodImage.style.display = 'block';
+        setTimeout(() => {
+            bloodImage.style.display = 'none';
+        }, 1000);
     });
 
     resetGame();
+
 });

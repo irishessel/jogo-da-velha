@@ -1,6 +1,6 @@
-# Jogo da Velha Assombrado 👻🦇
+# Jogo da Velha 👻🦇
 
-Bem-vindo ao Jogo da Velha Assombrado! Um jogo simples e divertido onde você enfrenta um morcego assustador. Será que você consegue vencer?
+Bem-vindo ao Jogo da Velha Assombrado! Um jogo simples e divertido onde você enfrenta um morcego. Será que você consegue vencer?
 
 ## Como Jogar
 
@@ -23,4 +23,4 @@ O jogo está disponível online. Você pode jogar agora mesmo [clicando aqui](ht
 
 Divirta-se jogando e cuidado com os morcegos!
 
-![Jogo da Velha Assombrado](img/screenshot.jpg)
+<img src="img/screenshot.jpg" width="500" alt="Jogo da Velha Assombrado">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -14,13 +14,19 @@
     <div id="game-container">
         <h1>Jogo da Velha de Halloween</h1>
         <div id="game-board"></div>
-        <img id="bat-image" src="img/bats.gif" alt="Zumbi" style="display: none;">
+        <img id="rip-image" class="result-image" src="img/rip.gif" alt="Rip" style="display: none;">
+        <img id="pumpkin-image" class="result-image" src="img/pumpkin.gif" alt="Abóbora" style="display: none;">
+        <img id="witch-image" class="result-image" src="img/witch.gif" alt="Chapéu de Bruxa" style="display: none;">
+        <img id="blood-image" src="img/blood.gif" alt="Sangue" style="display: none;">
         <p id="game-status"></p>
         <button id="reset-button">Reiniciar Jogo</button>
     </div>
 
     <audio id="victory-sound" src="audio/laugh.mp3"></audio>
     <audio id="defeat-sound" src="audio/yell.mp3"></audio>
+    <audio id="tie-sound" src="audio/witch.mp3"></audio>
+    <audio id="shooting-sound" src="audio/shooting.mp3"></audio>
+
     <script src="script.js"></script>
 
 </body>
